@@ -21,8 +21,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Guard - riot.txt must not exist until Riot supplies its exact content
-        run: test ! -e site/riot.txt
+      - name: Guard - riot.txt must be exactly the Riot-issued verification token (36 bytes, no newline)
+        run: test "$(cat site/riot.txt)" = "7260521b-a94a-4d03-97a3-478570f51c0d" && test "$(wc -c < site/riot.txt)" -eq 36
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
