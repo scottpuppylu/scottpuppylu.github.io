@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Diff Check / 哥布林大調查 — an opt-in VALORANT statistics project for private, invite-only friend groups. Synthetic demo.">
+  <title>Diff Check | 哥布林大調查</title>
+  <style>
+    :root { --bg: #f4f5f7; --surface: #ffffff; --text: #14171c; --muted: #576071; --border: #dde1e7; --accent: #c2410c; --accent-soft: #fff1e8; --accent-text: #9a3412; --warn: #92400e; --focus: #2563eb; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0f1115; --surface: #171a21; --text: #e9ebef; --muted: #a2aab8; --border: #2b303b; --accent: #fb923c; --accent-soft: #2a1a10; --accent-text: #fdba74; --warn: #fbbf24; --focus: #93c5fd; }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); color: var(--text); }
+    body { font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; line-height: 1.6; }
+    a { color: var(--accent-text); }
+    a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+    main { max-width: 860px; margin: 0 auto; padding: 24px 16px 40px; display: grid; gap: 16px; }
+    .brand { font-weight: 800; font-size: 1.05rem; color: var(--muted); margin: 0; }
+    h1 { margin: 0; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.1; }
+    .sub { margin: 0; font-size: 1.15rem; color: var(--muted); }
+    .demo { border: 2px solid var(--warn); border-radius: 10px; background: var(--accent-soft); padding: 12px 14px; }
+    .demo strong { color: var(--warn); letter-spacing: 0.03em; }
+    .demo p { margin: 4px 0 0; }
+    section { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+    section h2 { margin: 0 0 8px; font-size: 1.1rem; }
+    ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+    .links { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+    .links a { display: block; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; text-decoration: none; color: var(--text); background: var(--bg); }
+    .links a:hover { border-color: var(--accent); }
+    .links strong { display: block; color: var(--accent-text); }
+    .links span { color: var(--muted); font-size: 0.88rem; }
+    .not li::marker { content: "✕  "; }
+    footer { font-size: 0.8rem; color: var(--muted); display: grid; gap: 6px; }
+    footer p { margin: 0; overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="brand">哥布林大調查</p>
+      <h1>Diff Check</h1>
+      <p class="sub">隊內成員數據比較 · friendly within-squad comparison of consenting teammates</p>
+    </header>
+
+    <div class="demo" role="note">
+      <strong>SYNTHETIC DEMO / 示範資料</strong>
+      <p>哥布林大調查 is an opt-in VALORANT statistics project for private / invite-only friend groups. Everything shown today is synthetic: no real Riot account data is live, no Riot account connection is live, and this page calls no Riot API.</p>
+    </div>
+
+    <section aria-labelledby="open">
+      <h2 id="open">Open the synthetic demo</h2>
+      <ul class="links">
+        <li><a href="https://scottpuppylu.github.io/valorant-squad-analytics-v2/"><strong>Main demo</strong><span>Dashboard with fictional members</span></a></li>
+        <li><a href="https://scottpuppylu.github.io/valorant-squad-analytics-v2/#/compare"><strong>Diff Check</strong><span>Compare two consenting teammates</span></a></li>
+        <li><a href="https://scottpuppylu.github.io/valorant-squad-analytics-v2/#/product"><strong>Product review</strong><span>Use case, data flow, policy alignment</span></a></li>
+        <li><a href="https://scottpuppylu.github.io/valorant-squad-analytics-v2/#/demo-flow"><strong>Opt-in demo</strong><span>Join, connect (mock), permissions, revoke</span></a></li>
+        <li><a href="https://scottpuppylu.github.io/valorant-squad-analytics-v2/#/privacy"><strong>Privacy Policy</strong><span>Current demo vs future approved mode</span></a></li>
+        <li><a href="https://scottpuppylu.github.io/valorant-squad-analytics-v2/#/terms"><strong>Terms of Service</strong><span>Acceptable use and limitations</span></a></li>
+        <li><a href="https://github.com/scottpuppylu/valorant-squad-analytics-v2"><strong>Source repository</strong><span>github.com/scottpuppylu/valorant-squad-analytics-v2</span></a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="what">
+      <h2 id="what">What it is</h2>
+      <ul>
+        <li>Private or invite-only friend groups review their own VALORANT matches together.</li>
+        <li>Each member opts in individually; joining a group grants no data access.</li>
+        <li>Data collection, group visibility and public derived analytics are separate permissions, all off by default.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="not">
+      <h2 id="not">Diff Check is not</h2>
+      <ul class="not">
+        <li>a Riot rank, MMR, Elo or official ladder</li>
+        <li>opponent scouting or a lookup of players outside your group</li>
+        <li>real-time tactical guidance</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">Privacy / data request contact</h2>
+      <p>Privacy questions, data access and deletion requests: <a href="mailto:casper880115@gmail.com">casper880115@gmail.com</a></p>
+    </section>
+
+    <footer>
+      <p>哥布林大調查 isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
+      <p>哥布林大調查是獨立的第三方社群工具，未經 Riot Games 認可，也不代表 Riot Games 的立場。</p>
+    </footer>
+  </main>
+</body>
+</html>

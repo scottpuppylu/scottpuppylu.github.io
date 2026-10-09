@@ -1,0 +1,3 @@
+Diff Check root site control proof.
+This file is NOT riot.txt and is NOT a Riot verification token.
+It only proves that this repository can serve a plain text file at the domain root.
